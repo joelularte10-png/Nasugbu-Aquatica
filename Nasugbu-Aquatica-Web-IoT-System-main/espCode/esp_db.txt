@@ -1,0 +1,11 @@
+CREATE DATABASE aquatica_db;
+USE aquatica_db;
+
+CREATE TABLE sensor_readings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  temperature DECIMAL(5,2) NULL,
+  humidity    DECIMAL(5,2) NULL,
+  ph          DECIMAL(4,2) NULL,
+  created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_created (created_at)
+);

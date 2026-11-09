@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatica | Transaction</title>
+    <link rel="stylesheet" href="../../bootstrap_template/css/bootstrap.min.css">
+    <script src="../../bootstrap_template/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/transaction.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <a class="brand" href="homepage.html">
+                <span class="brand-logo">A</span>
+                <span>Aquatica</span>
+            </a>
+
+            <p class="menu-title">Functional Button</p>
+            <nav class="nav flex-column" aria-label="Main navigation">
+                <a class="nav-link" href="homepage.html">Dashboard</a>
+                <a class="nav-link active" href="transaction.html" aria-current="page">Transaction</a>
+                <a class="nav-link" href="inventory.html">Inventory</a>
+                <a class="nav-link" href="device.html">Device Monitoring</a>
+            </nav>
+        </aside>
+
+        <main class="main-content transaction-content">
+            <header class="transaction-header">
+                <div>
+                    <p class="welcome-label">NASUGBU AQUATICA</p>
+                    <h1>Aquatica Transaction Information System</h1>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#viewlogs">View Transaction Logs</button>
+                </div>
+            </header>
+
+            <form>
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <section class="transaction-card">
+                            <div class="form-section-heading">
+                                <span class="step-number">1</span>
+                                <div>
+                                    <h2>Buyer information</h2>
+                                    <p>Contact details for the person purchasing the fish.</p>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="buyer-name" class="form-label">Full name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" id="buyer-name" name="buyer-name" placeholder="Buyer name" autocomplete="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="buyer-phone" class="form-label">Phone number <span class="required">*</span></label>
+                                    <input type="tel" class="form-control" id="buyer-phone" name="buyer-phone" placeholder="09XX XXX XXXX" autocomplete="tel" required>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="transaction-card">
+                            <div class="form-section-heading">
+                                <span class="step-number">2</span>
+                                <div>
+                                    <h2>Fish and order details</h2>
+                                    <p>Note the animal being sold and its condition.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-7">
+                                    <label for="fish-type" class="form-label">Fish type / common name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Product or item">
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="fish-quantity" class="form-label">Number of Bought Product<span class="required">*</span></label>
+                                    <input type="number" class="form-control" id="fish-quantity" name="fish-quantity" min="1" placeholder="1" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="fish-notes" class="form-label">Animal / order notes</label>
+                                    <textarea class="form-control" id="fish-notes" name="fish-notes" rows="3" placeholder="Add health observations, special requests, or other relevant details"></textarea>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="transaction-card">
+                            <div class="form-section-heading">
+                                <span class="step-number">3</span>
+                                <div>
+                                    <h2>Handoff and payment</h2>
+                                    <p>Record how the fish will be safely handed to the buyer.</p>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="handoff" class="form-label">Handoff method <span class="required">*</span></label>
+                                    <select class="form-select" id="handoff" name="handoff" required>
+                                        <option value="" selected disabled>Select handoff method</option>
+                                        <option>Store pickup</option>
+                                        <option>Local delivery (confirm with shop)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="payment-method" class="form-label">Payment method <span class="required">*</span></label>
+                                    <select class="form-select" id="payment-method" name="payment-method" required>
+                                        <option value="" selected disabled>Select payment method</option>
+                                        <option>Cash</option>
+                                        <option>GCash</option>
+                                        <option>Bank transfer</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="payment-status" class="form-label">Payment status <span class="required">*</span></label>
+                                    <select class="form-select" id="payment-status" name="payment-status" required>
+                                        <option value="" selected disabled>Select status</option>
+                                        <option>Unpaid</option>
+                                        <option>Deposit paid</option>
+                                        <option>Paid in full</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="handoff-date" class="form-label">Pickup / delivery date</label>
+                                    <input type="date" class="form-control" id="handoff-date" name="handoff-date">
+                                </div>
+                                <div class="col-12">
+                                    <label for="handoff-address" class="form-label">Delivery address (if applicable)</label>
+                                    <textarea class="form-control" id="handoff-address" name="handoff-address" rows="2" placeholder="Address and delivery instructions"></textarea>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+
+
+    <!-- View Logs Modal -->
+
+    <div class="modal fade" id="viewlogs" tabindex=-1">
+        
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header"><h2>Transaction Logs</h2></div>
+                <div class="modal-body row">
+                    <table class="table table-stripped">
+                        <tr>
+                            <th>Transact Id</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Date / Time</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

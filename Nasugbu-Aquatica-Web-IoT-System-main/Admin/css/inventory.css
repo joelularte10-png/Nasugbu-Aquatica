@@ -1,0 +1,265 @@
+.inventory-content {
+    max-width: 1500px;
+}
+
+.inventory-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.inventory-header h1 {
+    margin: 0 0 7px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.add-stock-button {
+    padding: 10px 15px;
+    border: 0;
+    background: #20a6a6;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.add-stock-button:hover {
+    background: #168d91;
+    color: white;
+}
+
+.inventory-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 1px solid #cce8e7;
+    border-radius: 10px;
+    background: #f3fbfa;
+    color: #526e72;
+    font-size: 13px;
+}
+
+.inventory-note strong {
+    color: #168d91;
+}
+
+.inventory-stats {
+    margin-bottom: 20px;
+}
+
+.inventory-stat {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 13px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(30, 95, 105, 0.06);
+}
+
+.inventory-stat .stat-icon {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.inventory-stat p {
+    margin: 0 0 5px;
+    color: #71878b;
+    font-size: 13px;
+}
+
+.inventory-stat strong {
+    color: #23434a;
+    font-size: 22px;
+}
+
+.inventory-table-card {
+    padding: 22px;
+    border-radius: 13px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(30, 95, 105, 0.06);
+}
+
+.table-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.table-heading h2 {
+    margin: 0 0 5px;
+    color: #23434a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.table-heading p {
+    margin: 0;
+    color: #71878b;
+    font-size: 13px;
+}
+
+.inventory-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.inventory-filters .form-control {
+    max-width: 360px;
+}
+
+.inventory-filters .form-select {
+    max-width: 180px;
+}
+
+.stock-count {
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e8f7f8;
+    color: #168d91;
+    font-size: 12px;
+}
+
+.stock-threshold {
+    display: block;
+    margin-top: 3px;
+    color: #91a7aa;
+    font-size: 11px;
+}
+
+.status-out {
+    background: #fbe5e5;
+    color: #b14e4e;
+}
+
+.empty-state {
+    margin: 18px 0 0;
+    color: #71878b;
+    text-align: center;
+}
+
+.form-error {
+    margin: 16px 0 0;
+    color: #b14e4e;
+    font-size: 13px;
+}
+
+.inventory-table {
+    margin-bottom: 0;
+    color: #526e72;
+    font-size: 13px;
+}
+
+.inventory-table thead th {
+    padding: 12px;
+    border-bottom-color: #e6eeee;
+    color: #91a7aa;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.inventory-table tbody td {
+    padding: 14px 12px;
+    border-bottom-color: #edf2f2;
+}
+
+.inventory-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.fish-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #23434a;
+    white-space: nowrap;
+}
+
+.fish-avatar {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.guppy {
+    background: #e0f5f2;
+    color: #218c80;
+}
+
+.betta {
+    background: #f9eaf1;
+    color: #c76b95;
+}
+
+.goldfish {
+    background: #fff4d9;
+    color: #d29d2f;
+}
+
+.tetra {
+    background: #e5f3fb;
+    color: #4199c7;
+}
+
+.stock-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 16px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.status-available {
+    background: #e3f7ef;
+    color: #218c68;
+}
+
+.status-low {
+    background: #fff4d9;
+    color: #aa7b1b;
+}
+
+.table-footnote {
+    margin: 16px 0 0;
+    color: #91a7aa;
+    font-size: 12px;
+}
+
+@media (max-width: 767px) {
+    .inventory-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .inventory-header h1 {
+        font-size: 24px;
+    }
+
+    .inventory-table-card {
+        padding: 17px;
+    }
+
+    .inventory-filters {
+        flex-direction: column;
+    }
+
+    .inventory-filters .form-control,
+    .inventory-filters .form-select {
+        max-width: none;
+    }
+}

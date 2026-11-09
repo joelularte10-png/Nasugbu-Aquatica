@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatica | Create Account</title>
+    <link rel="stylesheet" href="../../bootstrap_template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../login_page/css/signup.css">
+</head>
+<body>
+    <main class="signup-page">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <section class="signup-card">
+                        <button class="btn btn-warning login-text"><a href="login.html">Return</a></button>
+                        <br><br>
+                        <h1>Create your account</h1>
+                        <p class="subtitle">Create Personalized Business role base Account</p>
+
+                        <form action="login.html">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter a username" autocomplete="username" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="role" class="form-label">Business Role</label>
+                                    <input type="text" class="form-control" id="role" name="role" placeholder="Role" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" autocomplete="new-password" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="confirm-password" class="form-label">Confirm password</label>
+                                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Enter it again" autocomplete="new-password" required>
+                                </div>
+                            </div>
+                            <br>
+
+                            <button type="submit" class="btn signup-button w-100" id="signupbtn">Create account</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../../jquery-4.0.0.min.js"></script>
+<script src="../auth_ajax.js"></script>
+</html>

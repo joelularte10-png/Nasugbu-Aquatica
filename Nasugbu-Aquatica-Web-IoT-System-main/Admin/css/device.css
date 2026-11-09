@@ -1,0 +1,305 @@
+.device-content {
+    max-width: 1500px;
+}
+
+.device-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.device-header h1 {
+    margin: 0 0 7px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.device-status,
+.reading-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+}
+
+.device-status {
+    padding: 9px 12px;
+    border: 1px solid #d5ece2;
+    border-radius: 20px;
+    background: white;
+    color: #43856e;
+    font-size: 12px;
+}
+
+.device-status span,
+.reading-status span {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #49b884;
+}
+
+/* Number override (fixes the span rule above) */
+.reading-value .reading-number {
+    color: #23434a;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/* Card status colors (.status-good already works from the base style) */
+.status-warning {
+    background: #fff4d9;
+    color: #b07d1a;
+}
+
+.status-warning span {
+    background: #e0a63a;
+}
+
+.status-danger {
+    background: #fde8e8;
+    color: #c0392b;
+}
+
+.status-danger span {
+    background: #e04b3a;
+    animation: pulse 0.8s infinite;
+}
+
+.status-offline {
+    background: #edf1f2;
+    color: #71878b;
+}
+
+.status-offline span {
+    background: #aab8ba;
+}
+
+/* Top-right badge */
+.device-status.is-live {
+    border-color: #d5ece2;
+    color: #43856e;
+}
+
+.device-status.is-offline {
+    border-color: #f3d3d0;
+    color: #c0392b;
+}
+
+.device-status.is-offline span {
+    background: #e04b3a;
+}
+
+/* Smooth marker movement when new data arrives */
+.range-marker {
+    transition: left 0.6s ease;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
+}
+
+.demo-note {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 22px;
+    padding: 12px 15px;
+    border: 1px solid #cce8e7;
+    border-radius: 10px;
+    background: #f3fbfa;
+    color: #526e72;
+    font-size: 13px;
+}
+
+.demo-note strong {
+    color: #168d91;
+}
+
+.monitoring-cards {
+    margin-bottom: 22px;
+}
+
+.monitor-card {
+    height: 100%;
+    padding: 22px;
+    border-radius: 13px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(30, 95, 105, 0.06);
+}
+
+.monitor-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.monitor-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #e8f7f8;
+    color: #168d91;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.humidity-card .monitor-icon {
+    background: #e5f3fb;
+    color: #4199c7;
+}
+
+.temperature-card .monitor-icon {
+    background: #fff4d9;
+    color: #d29d2f;
+}
+
+.reading-status {
+    padding: 6px 9px;
+    border-radius: 15px;
+    background: #e3f7ef;
+    color: #218c68;
+    font-size: 11px;
+}
+
+.reading-status span {
+    width: 6px;
+    height: 6px;
+}
+
+.monitor-label {
+    margin: 0 0 5px;
+    color: #71878b;
+    font-size: 14px;
+}
+
+.reading-value {
+    color: #23434a;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.reading-value span {
+    color: #71878b;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.reading-description {
+    margin: 6px 0 22px;
+    color: #91a7aa;
+    font-size: 12px;
+}
+
+.range-track {
+    height: 8px;
+    position: relative;
+    overflow: visible;
+    border-radius: 8px;
+    background: linear-gradient(to right, #f3c48d, #72c9b0, #9ccae5);
+}
+
+.humidity-card .range-track {
+    background: linear-gradient(to right, #f3c48d, #74c6df, #9ccae5);
+}
+
+.temperature-card .range-track {
+    background: linear-gradient(to right, #9ccae5, #72c9b0, #f3c48d);
+}
+
+.range-marker {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #168d91;
+    box-shadow: 0 1px 5px rgba(35, 67, 74, 0.3);
+    transform: translate(-50%, -50%);
+}
+
+.humidity-marker {
+    left: 62%;
+    background: #4199c7;
+}
+
+.temperature-marker {
+    left: 58%;
+    background: #d29d2f;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    color: #91a7aa;
+    font-size: 10px;
+}
+
+.monitor-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 13px;
+    border-top: 1px solid #edf2f2;
+    font-size: 12px;
+}
+
+.monitor-footer span {
+    color: #71878b;
+}
+
+.monitor-footer strong {
+    color: #38575c;
+    text-align: right;
+}
+
+.monitoring-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(30, 95, 105, 0.06);
+}
+
+.tip-icon {
+    color: #20a6a6;
+    font-size: 20px;
+}
+
+.monitoring-tip strong {
+    color: #23434a;
+    font-size: 13px;
+}
+
+.monitoring-tip p {
+    margin: 5px 0 0;
+    color: #71878b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+    .device-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .device-header h1 {
+        font-size: 24px;
+    }
+}

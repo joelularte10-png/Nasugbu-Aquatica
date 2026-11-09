@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquatica | Device Monitoring</title>
+    <link rel="stylesheet" href="../../bootstrap_template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/device.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <a class="brand" href="homepage.html">
+                <span class="brand-logo">A</span>
+                <span>Aquatica</span>
+            </a>
+
+            <p class="menu-title">Functional Button</p>
+            <nav class="nav flex-column" aria-label="Main navigation">
+                <a class="nav-link" href="homepage.html">Dashboard</a>
+                <a class="nav-link" href="transaction.html">Transaction</a>
+                <a class="nav-link" href="inventory.html">Inventory</a>
+                <a class="nav-link active" href="device.html" aria-current="page">Device Monitoring</a>
+            </nav>
+        </aside>
+
+        <main class="main-content device-content">
+            <header class="device-header">
+                <div>
+                    <p class="welcome-label">NASUGBU AQUATICA</p>
+                    <h1>Water monitoring</h1>
+                    <p class="page-subtitle">A quick look at the aquarium environment.</p>
+                </div>
+                <div class="device-status"><span></span> Sample status</div>
+            </header>
+
+            <section class="row g-4 monitoring-cards" aria-label="Water and room measurements">
+                <div class="col-md-4 col-xl-4">
+                    <article class="monitor-card ph-card">
+                        <div class="monitor-top">
+                            <div class="monitor-icon">pH</div>
+                            <span class="reading-status status-good" id="ph-status"><span></span> Normal</span>
+                        </div>
+                        <p class="monitor-label">Water pH</p>
+                        <div class="reading-value"><span class="reading-number" id="ph-value">7.2</span> <span>pH</span></div>
+                        <p class="reading-description">Water acidity level</p>
+                        <div class="range-track" aria-hidden="true">
+                            <span class="range-marker ph-marker" id="ph-marker"></span>
+                        </div>
+                        <div class="range-labels"><span>Acidic</span><span>Neutral</span><span>Alkaline</span></div>
+                        <div class="monitor-footer"><span>Suggested range</span><strong>6.5 – 8.0 pH</strong></div>
+                    </article>
+                </div>
+
+                <div class="col-md-4 col-xl-4">
+                    <article class="monitor-card humidity-card">
+                        <div class="monitor-top">
+                            <div class="monitor-icon">%</div>
+                            <span class="reading-status status-good" id="hum-status"><span></span> Normal</span>
+                        </div>
+                        <p class="monitor-label">Humidity</p>
+                        <div class="reading-value"><span class="reading-number" id="hum-value">62</span> <span>%</span></div>
+                        <p class="reading-description">Air humidity near the aquarium</p>
+                        <div class="range-track" aria-hidden="true">
+                            <span class="range-marker hum-marker" id="hum-marker"></span>>
+                        </div>
+                        <div class="range-labels"><span>Low</span><span>Comfortable</span><span>High</span></div>
+                        <div class="monitor-footer"><span>Room reading</span><strong>Ambient air</strong></div>
+                    </article>
+                </div>
+
+                <div class="col-md-4 col-xl-4">
+                    <article class="monitor-card temperature-card">
+                        <div class="monitor-top">
+                            <div class="monitor-icon">&#176;C</div>
+                            <span class="reading-status status-good" id="temp-status"><span></span> Normal</span>
+                        </div>
+                        <p class="monitor-label">Water temperature</p>
+                        <div class="reading-value"><span class="reading-number" id="temp-value">26.4</span> <span>&#176;C</span></div>
+                        <p class="reading-description">Current aquarium temperature</p>
+                        <div class="range-track" aria-hidden="true">
+                            <span class="range-marker temperature-marker" id="temp-marker"></span>
+                        </div>
+                        <div class="range-labels"><span>Cool</span><span>Comfortable</span><span>Warm</span></div>
+                        <div class="monitor-footer"><span>Example range</span><strong>24 – 28 &#176;C</strong></div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="device-status" id="device-status"><span></span> Connecting...</div>
+    <script src="../js/device.js"></script>
+</body>
+</body>
+</html>
